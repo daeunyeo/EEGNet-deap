@@ -2,26 +2,26 @@
 
 ## 1. Overview
 
-This project reproduces the EEGNet architecture proposed by Lawhern et al. (2018)
-and applies it to EEG-based emotion classification using the DEAP dataset.
+EEGNet (Lawhern et al., 2018) is widely used as a baseline
+in BCI deep learning research, frequently cited alongside
+more recent architectures.
+Implementing EEGNet was chosen as a foundation for understanding
+Depthwise and Separable Convolutions before moving on to
+these more advanced models.
 
-A previous sleep stage classification project using LSTM revealed a limitation:
-FFT summary values were used as input, preventing the model from directly learning
-raw EEG waveforms. EEGNet addresses this limitation by learning both temporal and
-spatial patterns simultaneously through Depthwise and Separable Convolutions.
-With 1,746 parameters, approximately 10x fewer than the previous LSTM (18,000),
-the model takes raw 32-channel EEG waveforms as input instead of FFT summary values.
+**Motivation**
+- Previous sleep stage classification using LSTM relied on FFT summary values,
+  preventing direct learning of raw EEG waveforms
+- EEGNet addresses this by learning temporal and spatial patterns
+  simultaneously through Depthwise and Separable Convolutions
+- Parameter count reduced from 18,000 (LSTM) to 1,746,
+  while switching from FFT summary values to raw 32-channel EEG input
 
-This project achieves a best test accuracy of 65.51% on 76,800 samples
-from 32 subjects in the DEAP dataset under cross-subject, Valence binary classification conditions.
-
-The project confirms the generalizability and compactness proposed in the original paper.
-The single architecture was applied to an emotion classification domain
-not covered in the original paper, confirmed without overfitting at 1,746 parameters.
-
-Beyond simple implementation, an ablation study was designed and conducted
-to measure the individual effects of epoch count, normalization method,
-and bandpass filter application on performance.
+**Results**
+- Best test accuracy: 65.51% on DEAP (32 subjects, 76,800 samples)
+- Confirmed generalizability and compactness of the original paper
+- Ablation study conducted across epoch count, normalization method,
+  and bandpass filter application
 
 ---
 
