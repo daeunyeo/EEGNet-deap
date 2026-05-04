@@ -12,7 +12,9 @@ these more advanced models.
 **Motivation**
 - Previous sleep stage classification using LSTM relied on FFT summary values,
   preventing direct learning of raw EEG waveforms
-- EEGNet addresses this by learning temporal and spatial patterns
+- LSTM also lacks the ability to learn spatial relationships between electrodes,
+  as it only processes along the time axis
+- EEGNet addresses both limitations by learning temporal and spatial patterns
   simultaneously through Depthwise and Separable Convolutions
 - Parameter count reduced from 18,000 (LSTM) to 1,746,
   while switching from FFT summary values to raw 32-channel EEG input
