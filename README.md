@@ -9,7 +9,7 @@ Implementing EEGNet was chosen as a foundation for understanding
 Depthwise and Separable Convolutions before moving on to
 these more advanced models.
 
-**Motivation**
+**Connection to Previous Work**
 - LSTM lacks the ability to learn spatial relationships between electrodes,
   as it only processes along the time axis
 - EEGNet addresses this with Depthwise and Separable Convolutions,
@@ -18,10 +18,10 @@ these more advanced models.
   preventing deep learning from demonstrating its potential.
   This project applies EEGNet to a larger dataset (DEAP, 32 subjects)
   with raw EEG input to verify whether scale and architecture change outcomes
-- Parameter count reduced from 18,000 (LSTM) to 1,746
 
 **Results**
 - Best test accuracy: 65.51% on DEAP (32 subjects, 76,800 samples)
+- Parameter count reduced from 18,000 (LSTM) to 1,746
 - Confirmed generalizability and compactness of the original paper
 - Ablation study conducted across epoch count, normalization method,
   and bandpass filter application
