@@ -193,7 +193,7 @@ and bandpass filter application on performance were measured separately.
 - Limited model capacity with 1,746 parameters (underfitting state, room for improvement)
 
 ### Future Work
-- k-fold or LOSO (Leave-One-Subject-Out) validation for improved reliability
+- k-fold or LOSO validation for improved reliability
 - DGCNN to model spatial relationships between electrodes as a graph
 
 ---
