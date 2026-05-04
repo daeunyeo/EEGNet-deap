@@ -10,14 +10,15 @@ Depthwise and Separable Convolutions before moving on to
 these more advanced models.
 
 **Motivation**
-- Previous sleep stage classification using LSTM relied on FFT summary values,
-  preventing direct learning of raw EEG waveforms
-- LSTM also lacks the ability to learn spatial relationships between electrodes,
+- LSTM lacks the ability to learn spatial relationships between electrodes,
   as it only processes along the time axis
-- EEGNet addresses both limitations by learning temporal and spatial patterns
-  simultaneously through Depthwise and Separable Convolutions
-- Parameter count reduced from 18,000 (LSTM) to 1,746,
-  while switching from FFT summary values to raw 32-channel EEG input
+- EEGNet addresses this with Depthwise and Separable Convolutions,
+  fundamental building blocks in lightweight deep learning architectures
+- Previous experiment was limited by a small dataset (668 epochs),
+  preventing deep learning from demonstrating its potential.
+  This project applies EEGNet to a larger dataset (DEAP, 32 subjects)
+  with raw EEG input to verify whether scale and architecture change outcomes
+- Parameter count reduced from 18,000 (LSTM) to 1,746
 
 **Results**
 - Best test accuracy: 65.51% on DEAP (32 subjects, 76,800 samples)
