@@ -10,6 +10,8 @@ Depthwise and Separable Convolutions before moving on to
 these more advanced models.
 
 **Connection to Previous Work**
+
+https://github.com/daeunyeo/sleep-stage-ml-vs-dl
 - LSTM lacks the ability to learn spatial relationships between electrodes,
   as it only processes along the time axis
 - EEGNet addresses this with Depthwise and Separable Convolutions,
